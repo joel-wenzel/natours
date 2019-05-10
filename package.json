@@ -4,12 +4,26 @@
   "description": "css project",
   "main": "index.js",
   "scripts": {
-    "compile": "node-sass sass/main.scss css/style.css -w",
-    "local": "live-server"
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development --open"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^4.11.0"
+    "node-sass": "^4.11.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "html-webpack-plugin": "^3.0.7",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.1.1"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-polyfill": "^6.26.0",
+    "fractional": "^1.0.0",
+    "uniqid": "^4.1.1"
   }
 }
