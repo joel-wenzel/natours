@@ -8,5 +8,4 @@ WORKDIR /usr/src/app
 COPY . /usr/src/app/
 RUN npm install
 
-ENTRYPOINT ["tail", "-f", "/dev/null"]
-#CMD [ "npm", "run", "local" ]
+ENTRYPOINT ["npm", "run", "start"]
