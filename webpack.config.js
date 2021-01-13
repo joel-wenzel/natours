@@ -9,12 +9,12 @@ module.exports = {
     },
     devServer: {
         contentBase: './dist',
-		port: 8099
+		port: 8090
     },
     plugins: [
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: './src/index.html'
+            template: './dist/index.html'
         })
     ],
     module: {

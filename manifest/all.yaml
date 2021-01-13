@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: natours
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app.kubernetes.io/name: natours
@@ -30,3 +30,20 @@ spec:
             httpGet:
               path: /
               port: http
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: natours
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 8099
+      protocol: TCP
+      name: http
+  selector:
+    app.kubernetes.io/name: natours
+    app.kubernetes.io/instance: natours
