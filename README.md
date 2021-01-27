@@ -1,6 +1,6 @@
 # Natours
 
-A sample containerized application for a Natours website.
+A sample containerized application for a Natours (Nature tours) website.
 
 ![Site Splash](splash.png)
 ## To Build
