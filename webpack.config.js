@@ -17,6 +17,7 @@ module.exports = {
             template: './dist/index.html'
         })
     ],
+    allowedHosts: "all",
     module: {
         rules: [
             {
